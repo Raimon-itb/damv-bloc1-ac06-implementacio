@@ -1,22 +1,28 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-    namespace dollarConverter
+    namespace calculMitjana
 {
     public static class Program
     {
         public static void Main()
         {
-            const double exchange_rate = 1.12;
-            const string Msg_input = "Enter the amount of euros: ";
-            const string Msg_result = "Amount in dollars: ";
+            const string Msg_input1 = "Enter first number: ";
+            const string Msg_input2 = "Enter second number: ";
+            const string Msg_input3 = "Enter third number: ";
+            const string Msg_result = "The avarage is: ";
 
-            double euros, dollars;
-            Console.WriteLine(Msg_input);
-            euros = Convert.ToDouble(Console.ReadLine());
+            double num1, num2, num3, avarage;
+            Console.WriteLine(Msg_input1);
+            num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(Msg_input2);
+            num2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(Msg_input3);
+            num3 = Convert.ToDouble(Console.ReadLine());
 
-            dollars = euros * exchange_rate;
+            avarage = (num1 + num2 + num3) / 3;
 
-            Console.WriteLine(Msg_result + dollars);
+            Console.WriteLine(Msg_result + avarage);
         }
     }
 }
