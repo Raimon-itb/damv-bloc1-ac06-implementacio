@@ -1,24 +1,22 @@
 ﻿using System;
 
-    namespace areaRectangle
+    namespace dollarConverter
 {
     public static class Program
     {
         public static void Main()
         {
-            const string Msg_input_width = "Enter the width of the rectangle: ";
-            const string Msg_input_height = "Enter the height of the rectangle: ";
-            const string Msg_result = "The area of the rectangle is: ";
+            const double exchange_rate = 1.12;
+            const string Msg_input = "Enter the amount of euros: ";
+            const string Msg_result = "Amount in dollars: ";
 
-            double width, height, area;
-            Console.WriteLine(Msg_input_width);
-            width = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(Msg_input_height);
-            height = Convert.ToDouble(Console.ReadLine());
+            double euros, dollars;
+            Console.WriteLine(Msg_input);
+            euros = Convert.ToDouble(Console.ReadLine());
 
-            area = width * height;
+            dollars = euros * exchange_rate;
 
-            Console.WriteLine(Msg_result + area);
+            Console.WriteLine(Msg_result + dollars);
         }
     }
 }
