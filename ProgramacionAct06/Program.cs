@@ -1,23 +1,21 @@
 ﻿using System;
 
-    namespace sumaEnters
+    namespace conversorKelvin
 {
     public static class Program
     {
         public static void Main()
         {
-            const string Msg_input1 = "Enter the first integer: ";
-            const string Msg_input2 = "Enter the second integer: ";
-            const string Msg_result = "The sum is: ";
+            const string Msg_input = "Enter temperature in Clesius: ";
+            const string Msg_result = "Temperature in Kelvin is: ";
 
-            int num1, num2, sum;
-            Console.WriteLine(Msg_input1);
-            num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(Msg_input2);
-            num2 = Convert.ToInt32(Console.ReadLine());
-            sum = num1 + num2;
+            double celsius, kelvin;
+            Console.WriteLine(Msg_input);
+            celsius = Convert.ToDouble(Console.ReadLine());
+      
+            kelvin = celsius + 273.15;
 
-            Console.WriteLine(Msg_result + sum);
+            Console.WriteLine(Msg_result + kelvin);
         }
     }
 }
