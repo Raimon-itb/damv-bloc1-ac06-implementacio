@@ -1,21 +1,24 @@
 ﻿using System;
 
-    namespace conversorKelvin
+    namespace areaRectangle
 {
     public static class Program
     {
         public static void Main()
         {
-            const string Msg_input = "Enter temperature in Clesius: ";
-            const string Msg_result = "Temperature in Kelvin is: ";
+            const string Msg_input_width = "Enter the width of the rectangle: ";
+            const string Msg_input_height = "Enter the height of the rectangle: ";
+            const string Msg_result = "The area of the rectangle is: ";
 
-            double celsius, kelvin;
-            Console.WriteLine(Msg_input);
-            celsius = Convert.ToDouble(Console.ReadLine());
-      
-            kelvin = celsius + 273.15;
+            double width, height, area;
+            Console.WriteLine(Msg_input_width);
+            width = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(Msg_input_height);
+            height = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine(Msg_result + kelvin);
+            area = width * height;
+
+            Console.WriteLine(Msg_result + area);
         }
     }
 }
