@@ -1,28 +1,40 @@
 ﻿using System;
+using System.Numerics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-    namespace calculMitjana
+    namespace isNaturalNumber
 {
     public static class Program
     {
         public static void Main()
         {
-            const string Msg_input1 = "Enter first number: ";
-            const string Msg_input2 = "Enter second number: ";
-            const string Msg_input3 = "Enter third number: ";
-            const string Msg_result = "The avarage is: ";
+            const string Msg_input = "Enter a value to check if it's a natural: ";
+            const string Msg_ok = "Is a natural number.";
+            const string Msg_ko = "Is NOT a natural number.";
 
-            double num1, num2, num3, avarage;
-            Console.WriteLine(Msg_input1);
-            num1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(Msg_input2);
-            num2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(Msg_input3);
-            num3 = Convert.ToDouble(Console.ReadLine());
+            int value;
+            bool isNatural;
 
-            avarage = (num1 + num2 + num3) / 3;
+            Console.WriteLine(Msg_input);
+            value = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(Msg_result + avarage);
+            if (value >= 0)
+            {
+                isNatural = true;
+            }
+            else
+            {
+                isNatural = false;
+            }
+
+            if (isNatural )
+            {
+                Console.WriteLine(Msg_ok);
+            }
+            else
+            {
+                Console.WriteLine(Msg_ko);
+            }
         }
     }
 }
