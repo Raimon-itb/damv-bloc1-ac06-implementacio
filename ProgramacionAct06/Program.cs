@@ -2,38 +2,28 @@
 using System.Numerics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-    namespace isNaturalNumber
+    namespace checkInterval
 {
     public static class Program
     {
         public static void Main()
         {
-            const string Msg_input = "Enter a value to check if it's a natural: ";
-            const string Msg_ok = "Is a natural number.";
-            const string Msg_ko = "Is NOT a natural number.";
+            const string Msg_input = "Enter a value to check if it's within the interval (5, 50):";
+            const string Msg_ok = "Is within the interval (5, 50).";
+            const string Msg_ko = "Is NOT within the interval (5, 50).";
 
-            int value;
-            bool isNatural;
+            int number;
 
             Console.WriteLine(Msg_input);
-            value = Convert.ToInt32(Console.ReadLine());
+            number = int.Parse(Console.ReadLine());
 
-            if (value >= 0)
+            if (number > 5 && number < 50)
             {
-                isNatural = true;
+                Console.WriteLine(number + " " + Msg_ok);
             }
             else
             {
-                isNatural = false;
-            }
-
-            if (isNatural )
-            {
-                Console.WriteLine(Msg_ok);
-            }
-            else
-            {
-                Console.WriteLine(Msg_ko);
+                Console.WriteLine(number + " " + Msg_ko); ;
             }
         }
     }
